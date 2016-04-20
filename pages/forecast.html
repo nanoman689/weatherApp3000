@@ -1,1 +1,15 @@
-Forecast
+Forecast for {{city}}
+
+<div ng-repeat="w in weatherResults.list">
+    <div class="row">
+        <div class="col">
+            <div class="panel">
+                <h3 class="date">Date: {{ convertDate (w.dt) | date:'EEEE, MMMM d, y'  }}</h3>
+            </div>
+            <div class="panel">
+                <h4 class="date">Daytime tempature: {{ convertToF (w.temp.day) }}&deg;F</h3>
+            </div>
+        </div>
+    </div>    
+    
+</div>
